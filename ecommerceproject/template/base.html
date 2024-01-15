@@ -1,0 +1,26 @@
+{% load static %}
+<head xmlns="http://www.w3.org/1999/html">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" >
+    <script src="https://kit.fontawesome.com/8a81e3c04b.js" crossorigin="anonymous"></script>
+
+    <meta name="description" content="{% block metadescription %} {% endblock %}">
+    <title>{% block title %} {% endblock%}
+    </title>
+</head>
+<body>
+
+<div class="container">
+{% include 'header.html' %}
+{% include 'nav.html' %}
+
+{% block content %}
+{% endblock %}
+
+{% include 'footer.html' %}
+</div>
+<script src="{% static 'js/popper.min.js' %}" ></script>
+<script src="{% static 'js/bootstrap.min.js' %}"> </script>
+</body>
+</html>
